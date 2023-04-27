@@ -1,0 +1,133 @@
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-form input[type='text'] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 30%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  font-size: 20px;
+  color: white;
+}
+
+.search-form button[type='submit'] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  transition: border-radius 0.4s ease;
+}
+.search-form button:hover {
+  // background-color: #f894d7;
+  border-radius: 50%;
+}
+
+.load-more {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.search-container {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  padding: 10px 0;
+}
+
+.search-container:before {
+  content: '';
+  display: block;
+  height: 60px;
+  background: linear-gradient(to bottom, #e22b8d, #4b0082);
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+}
+
+.gallery,
+.info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery {
+  margin-left: -20px;
+  justify-content: center;
+}
+
+.gallery__link {
+  margin-top: 20px;
+  margin-left: 20px;
+  min-width: 320px;
+  flex-basis: calc((100% - 80px) / 4);
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.gallery__link:hover,
+.gallery__link:focus {
+  transform: scale(1.05);
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.gallery-item__img {
+  display: block;
+  height: 30vh;
+  object-fit: cover;
+}
+
+.info {
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(7, 7, 7);
+  font-size: 14px;
+}
+
+.info-item:not(:first-child) {
+  margin-left: 5px;
+}
