@@ -5,6 +5,7 @@ import axios from 'axios';
 
 const pixabayAPI = axios.create({
   baseURL: 'https://pixabay.com/',
+  withCredentials: true,
 });
 
 const searchForm = document.getElementById('search-form');
