@@ -5,7 +5,6 @@ import axios from 'axios';
 
 const pixabayAPI = axios.create({
   baseURL: 'https://pixabay.com/',
-  withCredentials: true,
 });
 
 const searchForm = document.getElementById('search-form');
@@ -37,7 +36,7 @@ function searchImages() {
   Notiflix.Loading.dots('Loading...');
 
   pixabayAPI
-    .get('/api', {
+    .get('api/', {
       params: {
         key: '35823883-f26519cd3efcd4788cefc8848',
         q: query,
