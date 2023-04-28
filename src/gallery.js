@@ -3,7 +3,9 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://pixabay.com/';
+const pixabayAPI = axios.create({
+  baseURL: 'https://pixabay.com/',
+});
 
 const searchForm = document.getElementById('search-form');
 const gallery = document.querySelector('.gallery');
@@ -33,7 +35,7 @@ function onSearchForm(event) {
 function searchImages() {
   Notiflix.Loading.dots('Loading...');
 
-  axios
+  pixabayAPI
     .get('/api', {
       params: {
         key: '35823883-f26519cd3efcd4788cefc8848',
